@@ -1,0 +1,91 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Droid Sans', sans-serif;
+}
+.navbar{
+    min-height: 67px;
+    background:rgba(0,0,0,1);
+    /*border-bottom:1px solid #ddd;*/
+    border-radius: 0;
+
+}
+
+.navbar-nav{
+    margin:7.5px -15px;
+}
+.navbar-brand img{
+    height:40px;
+}
+.navbar-nav li a{
+    color:#fff;
+    opacity:0.5;
+}
+.navbar-nav li a:hover,.navbar-nav li a:focus{
+    color:#fff;
+    opacity:1;
+    background:none;
+}
+.quotes {
+    font-family: 'Lobster', cursive;
+}
+
+.ptb-10 {
+    padding: 10px;
+}
+
+.plr-20 {
+    padding: 0px 20px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.outerwrapper {
+    padding: 50px 0px 0px 0px;
+}
+
+.innerwrapper {
+    padding: 100px 0px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+.border-right {
+    border-right: 1px solid #ddd;
+}
+
+.big-heading {
+    font-size: 40px;
+    margin: 10px 0px;
+}
+
+.selected img {
+    opacity: 0.5;
+}
+
+.footer {
+    padding: 20px;
+    /*background: rgba(0, 0, 0, 0.7);*/
+    border-top:1px solid #ddd;
+}
+
+.footer p {
+    margin: 10px 0px;
+    font-size:16px;
+}
+
+.carousel-control i {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+}
+
+.list-inline li {
+    padding: 0px;
+}
