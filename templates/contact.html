@@ -1,0 +1,45 @@
+<head>
+    <ng-include src="'templates/styles.html'"></ng-include>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+<ng-include src="'templates/header.html'"></ng-include>
+<article class="outerwrapper" id="cntWall">
+
+</article>
+<div class="container">
+    <div class="row">
+        <article id="contactContent">
+            <h1 class="text-center border-bottom ptb-10 mb-15">Contact</h1>
+            <div class="col-md-6">
+                <p>You can contact us for any queries using this simple form</p>
+                <form class="" role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name" name="fullname" id="fullname_id">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Email" id="email-id" name="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Contact No." name="contactno"
+                               id="contactno_id">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" id="message_id"
+                                  placeholder="Message/Query"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="submit_id" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-12">
+                <p>These are our contact details:</p>
+
+            </div>
+        </article>
+    </div>
+</div>
+<div id="googlemaps" style="height:100%"></div>
+</body>
+</html>
