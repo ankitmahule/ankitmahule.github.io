@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #abtWall{
     background:url('../images/backgrounds/aboutback.jpg') no-repeat center center;
     background-size: cover;
@@ -9,3 +10,16 @@
 #abtContentLeft{
     min-height:inherit;
 }
+=======
+#abtWall{
+    background:url('../images/backgrounds/aboutback.jpg') no-repeat center center;
+    background-size: cover;
+    min-height:300px;
+}
+#abtContent{
+    min-height:400px;
+}
+#abtContentLeft{
+    min-height:inherit;
+}
+>>>>>>> 7036eed4328c3cab104cf2bd5cda109dc8361c08

@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 #cntWall{
     background:url('../images/backgrounds/contactback.jpg') no-repeat center center;
     background-size: cover;
     min-height:300px;
 }
+=======
+#cntWall{
+    background:url('../images/backgrounds/contactback.jpg') no-repeat center center;
+    background-size: cover;
+    min-height:300px;
+}
+>>>>>>> 7036eed4328c3cab104cf2bd5cda109dc8361c08
