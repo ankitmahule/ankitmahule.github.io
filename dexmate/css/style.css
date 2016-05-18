@@ -8,9 +8,9 @@ body {
 
 .navbar {
     min-height: 67px;
-    background: rgba(0, 0, 0, 0.9);
+    background:#fff;
     border-radius: 0;
-    border:none;
+    border:1px solid #ddd;
 }
 
 /*
