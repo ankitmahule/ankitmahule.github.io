@@ -10,9 +10,17 @@ body {
     min-height: 67px;
     background: rgba(0, 0, 0, 0.9);
     border-radius: 0;
+    border:none;
 }
 
 /*
+
+    background: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+}
+
+
 .navbar-nav li a {
     color: #777;
 }
@@ -40,6 +48,7 @@ body {
 .pad-10{
     padding:10px;
 }
+
 .ptb-20 {
     padding: 20px;
 }

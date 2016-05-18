@@ -1,31 +1,33 @@
 /*
     ** Head and Jumbotron **
 */
+
 #headContent {
-
-
-background: #457fca; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #457fca , #5691c8); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
-        
-    min-height:600px;
-
-}
-.jumbotron{
-    background:transparent !important;
-    color:#fff;
-    padding-top:80px;
+    background: #457fca;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #457fca, #5691c8);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #457fca, #5691c8);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 600px;
 }
 
-#keyFeatures li{
-    font-size:16px;
-    padding:15px 0px 0px 0px;
+.jumbotron {
+    background: transparent !important;
+    color: #fff;
+    padding-top: 80px;
 }
+
+#keyFeatures li {
+    font-size: 16px;
+    padding: 15px 0px 0px 0px;
+}
+
 
 /*
     ** About Section **
 */
+
 #aboutContent {
     min-height: 600px;
 }
@@ -45,7 +47,7 @@ background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, F
 #aboutContent p {
     font-size: 25px;
     line-height: 40px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 #aboutContent hr {
@@ -53,12 +55,13 @@ background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, F
     -o-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
-
 }
+
 
 /*
     ** Products Section **
 */
+
 #productsContent {
     min-height: 500px;
     /*color: #fff;*/
@@ -78,9 +81,11 @@ background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, F
     margin: 20px 5px;
 }
 
+
 /*
     ** Tech Section **
 */
+
 #techContent {
     min-height: 500px;
 }
@@ -94,50 +99,56 @@ background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, F
     /*background: #CDBB79;*/
     min-height: inherit;
 }
-#techGrid ul li{
-    margin:10px 10px 10px 0px;
+
+#techGrid ul li {
+    margin: 10px 10px 10px 0px;
 }
-#techGrid img{
-   width:120px;
-    height:120px;
+
+#techGrid img {
+    width: 120px;
+    height: 120px;
 }
+
+
 /*
     ** Media Queries **
 */
+
+
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
-    .jumbotron{
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .jumbotron {
         padding-top: 60px;
-        min-height:300px;
+        min-height: 300px;
     }
-    .innerwrapper{
-        padding:60px 0px 20px 0px;
+    .innerwrapper {
+        padding: 60px 0px 20px 0px;
     }
-    #aboutContent p{
-        font-size:14px;
-        padding:0px;
+    #aboutContent p {
+        font-size: 14px;
+        padding: 0px;
         line-height: 35px;
     }
-
-    #productsContent{
+    #productsContent {
         min-height: 400px;
     }
-    #techContent{
+    #techContent {
         min-height: 500px;
     }
-    #prodRight,#techLeft{
-        min-height:300px;
+    #prodRight,
+    #techLeft {
+        min-height: 300px;
     }
-    h3{
-        padding:30px 0px;
-        margin-top:0px;
+    h3 {
+        padding: 30px 0px;
+        margin-top: 0px;
     }
-    ol,ul{
-        margin:0;
+    ol,
+    ul {
+        margin: 0;
     }
-    #slider-thumbs{
-        margin:10px 0px 0px 5px;
+    #slider-thumbs {
+        margin: 10px 0px 0px 5px;
     }
 }

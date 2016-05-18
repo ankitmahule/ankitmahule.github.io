@@ -43,12 +43,14 @@ app.controller("homeController", function ($scope) {
     };
     $scope.load();
 });
+
 app.controller("registerController", function ($scope) {
     $scope.message = "Hello register";
 });
 
 app.controller("loginController", function ($scope) {
     $scope.message = "hello login";
+
 });
 /*
 app.controller("caraouselDemoController", function ($scope) {
