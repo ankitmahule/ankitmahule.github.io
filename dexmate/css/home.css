@@ -53,14 +53,6 @@ background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, F
     margin-bottom: 20px;
 }
 
-#aboutContent hr {
-    transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-}
-
-
 /*
     ** Products Section **
 */
