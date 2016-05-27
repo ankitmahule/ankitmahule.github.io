@@ -1,7 +1,7 @@
 <head>
     <title>Dexmate - Register</title>
     <ng-include src="'templates/styles.html'"></ng-include>
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/register.css">
     <ng-include src="'templates/scripts.html'"></ng-include>
 </head>
 
@@ -10,43 +10,52 @@
     <article class="outerwrapper innerwrapper">
         <div class="container">
             <div class="row">
-                <article id="registerContent">
-
-                    <div class="col-md-6 col-md-offset-3">
-                        <h3 class="border-bottom mb-15 ptb-10">New User Registration</h3>
-                        <h6 class="text-info mb-15">Please note that all fields are compulsory.</h6>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6 form-group">
-                                    <input type="text" class="form-control" placeholder="First Name" autofocus/>
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <input type="text" class="form-control" placeholder="Last Name" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Email Address" />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Confirm Password" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Contact Number" />
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9 col-xs-12 form-group">
-                                   Already registered? <a href="#/login">Login</a>
-                                </div>
-                                <div class="col-md-3 col-xs-12 form-group">
-                                    <button type="button" class="btn btn-primary btn-block pull-right">Submit</button>
-                                </div>
-                            </div>
-                        </form>
+                <section class="col-md-6">
+                    <div class="jumbotron">
+                        <h1>Register to serve you better..</h1>
                     </div>
-                </article>
+                </section>
+                <section class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3>Form seems very simple, isn't it?</h3>
+                           
+                        </div>
+                        <div class="panel-body">
+
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <input type="text" class="form-control" placeholder="First Name" autofocus/>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input type="text" class="form-control" placeholder="Last Name" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Email Address" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Password" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Confirm Password" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Contact Number" />
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-9 col-xs-12 form-group">
+                                        Already registered? <a href="#/login">Login</a>
+                                    </div>
+                                    <div class="col-md-3 col-xs-12 form-group">
+                                        <button type="button" class="btn btn-primary btn-block pull-right">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </article>

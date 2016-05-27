@@ -2,16 +2,17 @@
     ** Head and Jumbotron **
 */
 
+body {
+    background: #e2e2e3;
+}
+
 #headContent {
-    
-
-
-
-background: #457fca; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #457fca , #5691c8); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
-        
+    background: #457fca;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #457fca, #5691c8);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #457fca, #5691c8);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     min-height: 600px;
 }
 
@@ -32,7 +33,8 @@ background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, F
 */
 
 #aboutContent {
-    min-height: 600px;
+    min-height: 500px;
+    box-shadow: 0px 2px 0px #ddd;
 }
 
 #aboutLeft {
@@ -51,6 +53,29 @@ background: linear-gradient(to left, #457fca , #5691c8); /* W3C, IE 10+/ Edge, F
     font-size: 25px;
     line-height: 40px;
     margin-bottom: 20px;
+}
+
+
+/*    
+    ** How it works Section **
+*/
+
+.circle-widget{
+    height:200px;
+    width:200px;
+    border:1px solid #ddd;
+    line-height:200px;
+    border-radius:100px;
+    font-size:90px;
+    text-align:center;
+    margin:0 auto 15px auto;
+  background: #337ab7;
+    color:#FFF8DC;
+}
+.circle-widget + p{
+    font-size:18px;
+    color:#777;
+    line-height:30px;
 }
 
 /*
