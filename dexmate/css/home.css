@@ -2,9 +2,6 @@
     ** Head and Jumbotron **
 */
 
-body {
-    background: #e2e2e3;
-}
 
 #headContent {
     background: #457fca;
@@ -42,7 +39,13 @@ body {
     /*background: #008E54;*/
     /*color: #fff;*/
 }
-
+#triangle-topleft {
+	width: 0;
+	height: 0;
+    position:absolute;
+	border-top: 500px solid #000;
+	border-right: 600px solid transparent;
+}
 #aboutRight {
     min-height: inherit;
     /*background: rgba(0, 142, 84, 0.8);*/
@@ -100,7 +103,9 @@ body {
 #slider-thumbs {
     margin: 20px 5px;
 }
-
+.bg-prod-custom{
+    background:green;
+}
 
 /*
     ** Tech Section **
