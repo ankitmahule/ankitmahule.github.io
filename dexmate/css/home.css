@@ -99,7 +99,11 @@
     /*background: #337ab7;*/
     min-height: inherit;
 }
-
+.font-lg{
+    font-size:100px;
+    color:#5bc0de;
+    margin-bottom:20px;
+}
 #slider-thumbs {
     margin: 20px 5px;
 }
