@@ -1,0 +1,366 @@
+
+<head>
+    <meta charset="utf-8">
+    <title>FMT-homepage</title>
+    <!-- Bootstrap 3 CSS-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+    <!--Font Awesome-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--Jquery-->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!--Bootstrap 3 JS-->
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+            background: #fff;
+            font-family: 'Droid Sans', sans-serif;
+            padding-top: 0px;
+        }
+        
+        .navbar {
+            background: #d85277;
+            box-shadow: 0px 0px 4px #666;
+            margin-bottom: 0px;
+        }
+        
+        .navbar a {
+            color: #fff;
+        }
+        
+        .headings {
+            color: #F05C85;
+            margin-bottom: 40px;
+            margin-top: 0px;
+        }
+        
+        .band {
+            background: #1c262f;
+            height: 300px;
+            padding-top: 40px;
+            color: #fff;
+        }
+        
+        .logo-heading {
+            color: #f3f3f3;
+            font-size: 50px;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+        
+        .main-content {
+            position: absolute;
+            top: 30%;
+            width: 80%;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            background: #fff;
+            padding: 30px 13px;
+        }
+        
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        
+        .mt-20 {
+            margin-top: 20px;
+        }
+        
+        .mb-10 {
+            margin-bottom: 10px;
+        }
+        
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+        
+        .mr-5 {
+            margin-right: 5px;
+        }
+        
+        .pdb-10 {
+            padding-bottom: 10px;
+        }
+        
+        .border-bottom {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .logo-icons {
+            font-size: 80px;
+        }
+        
+        .trailer-container {
+            padding: 30px 0px;
+        }
+        
+        .category-heading {
+            color: #F05C85;
+        }
+        
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .movie-card {
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+        }
+        
+        .movie-card a {
+            color: #003366;
+        }
+        
+        .movie-card img {
+            margin-bottom: 10px;
+        }
+        
+        .movie-card a:hover,
+        .movie-card a:focus {
+            text-decoration: none;
+        }
+        
+        .movie-name {
+            color: #F05C85;
+            font-weight: bold;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-bottom: 0px;
+        }
+        
+        .story-line {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-bottom: 0px;
+        }
+        
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+        
+        @media only screen and (min-device-width:320px) and (max-device-width:749px) {
+            .main-content {
+                top: 14%;
+            }
+        }
+        
+        @media only screen and (min-device-width:768px) and (max-device-width:1024px) {
+            .main-content {
+                top: 18%;
+            }
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function(event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-card', function(event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+                'id': 'trailer-video',
+                'type': 'text-html',
+                'src': sourceUrl,
+                'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+    </script>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+                    <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24" />
+                </a>
+                <div class="scale-media" id="trailer-video-container">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Page Content -->
+    <section class="container-fluid band">
+        <header class="text-center">
+            <div class="col-md-4 col-xs-4 mt-20">
+                <i class="fa fa-play-circle logo-icons" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-4 col-xs-4">
+                <h1 class="logo-heading">FMT</h1>
+                <h4 class="headings">Fresh Movies Trailers</h4>
+            </div>
+            <div class="col-md-4 col-xs-4 mt-20">
+                <i class="fa fa-film logo-icons" aria-hidden="true"></i>
+            </div>
+        </header>
+    </section>
+    <section class="main-content">
+        <div class="middle-content">
+            <h3 class="text-center headings">The trailers of your favorite movies are here. Check them out.</h3>
+        </div>
+        <div class="trailer-container">
+          <div class="trailer-contents row">
+            <h4 class="category-heading mb-20 pdb-10 border-bottom"><i class="fa fa-film mr-5" aria-hidden="true"></i><span>New Releases and Popular Movies</span></h4>            
+                
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-center">
+        <div class="movie-card" data-trailer-youtube-id="KYz2wyBy3kc" data-toggle="modal" data-target="#trailer">
+            <a href="javascript:void(0)" class="movie-text" title="Toy Story-A story of a boy and his toys that come to life">
+                <img class="img-responsive" src="http://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg" width="220" height="342">
+                <span class="movie-name">Toy Story</span>
+                <p class="story-line">A story of a boy and his toys that come to life</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-center">
+        <div class="movie-card" data-trailer-youtube-id="dN26X92SOu8" data-toggle="modal" data-target="#trailer">
+            <a href="javascript:void(0)" class="movie-text" title="Cars-Blindsided by a new generation of blazing-fast cars, the legendary Lighting McQueen finds himself pushed out of the sport that he loves.">
+                <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=http%3A%2F%2Faolx.tmsimg.com%2Fmovieposters%2Fv7%2FAllPhotos%2F12216968%2Fp12216968_p_v7_ac.jpg%3Fw%3D270&client=cbc79c14efcebee57402&signature=d1d669fff37f96462e63b32b45b7aef191f18789" width="220" height="342">
+                <span class="movie-name">Cars</span>
+                <p class="story-line">Blindsided by a new generation of blazing-fast cars, the legendary Lighting McQueen finds himself pushed out of the sport that he loves.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-center">
+        <div class="movie-card" data-trailer-youtube-id="xzyE4m1BDkI" data-toggle="modal" data-target="#trailer">
+            <a href="javascript:void(0)" class="movie-text" title="Rail Road Tigers-A railroad worker (Jackie Chan) and his ragtag group of freedom fighters find themselves on the wrong side of the tracks when they decide to ambush a heavily armed military train filled with desperately needed provisions.">
+                <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=http%3A%2F%2Faolx.tmsimg.com%2Fmovieposters%2Fv7%2FNowShowing%2F13516620%2Fp13516620_p_v7_ab.jpg%3Fw%3D270&client=cbc79c14efcebee57402&signature=5a60cabe12694af9ee8a21becaf4e8df67c68e1a" width="220" height="342">
+                <span class="movie-name">Rail Road Tigers</span>
+                <p class="story-line">A railroad worker (Jackie Chan) and his ragtag group of freedom fighters find themselves on the wrong side of the tracks when they decide to ambush a heavily armed military train filled with desperately needed provisions.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-center">
+        <div class="movie-card" data-trailer-youtube-id="QbJM3FF3Lbc" data-toggle="modal" data-target="#trailer">
+            <a href="javascript:void(0)" class="movie-text" title="Max Steel-Teenager Max McGrath (Ben Winchell) discovers that his body can generate the most powerful energy in the universe. Steel (Josh Brener) is a funny, slightly rebellious, techno-organic extraterrestrial who wants to utilize Max's skills.">
+                <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=https%3A%2F%2Fs3.amazonaws.com%2Fmoviefone%2Fimages%2Fposters%2F20068147_poster_148037253453.jpg&client=cbc79c14efcebee57402&signature=ac9c1d026f7a051132f07362911de6f6ec587dfb" width="220" height="342">
+                <span class="movie-name">Max Steel</span>
+                <p class="story-line">Teenager Max McGrath (Ben Winchell) discovers that his body can generate the most powerful energy in the universe. Steel (Josh Brener) is a funny, slightly rebellious, techno-organic extraterrestrial who wants to utilize Max's skills.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-center">
+        <div class="movie-card" data-trailer-youtube-id="JMdkofVdSIY" data-toggle="modal" data-target="#trailer">
+            <a href="javascript:void(0)" class="movie-text" title="Altitude-Gretchen Blair is a headstrong FBI agent who goes rogue during a hostage negotiation and is sent packing to a desk job back in Washington, D.C. As soon as her flight takes off, her seatmate offers her millions of dollars if she can get him off the plane alive.">
+                <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=http%3A%2F%2Faolx.tmsimg.com%2Fmovieposters%2Fv7%2FAllPhotos%2F13888905%2Fp13888905_p_v7_aa.jpg%3Fw%3D270&client=cbc79c14efcebee57402&signature=f34cc2a9ecc44964959f0ad4cee167ff7c311887" width="220" height="342">
+                <span class="movie-name">Altitude</span>
+                <p class="story-line">Gretchen Blair is a headstrong FBI agent who goes rogue during a hostage negotiation and is sent packing to a desk job back in Washington, D.C. As soon as her flight takes off, her seatmate offers her millions of dollars if she can get him off the plane alive.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-center">
+        <div class="movie-card" data-trailer-youtube-id="ap_53-uJKsw" data-toggle="modal" data-target="#trailer">
+            <a href="javascript:void(0)" class="movie-text" title="El Americano-When a gang of bully birds threaten his father and take over their circus, Cuco the parrot heads to Hollywood to ask TV superhero El Americano for help.">
+                <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=http%3A%2F%2Faolx.tmsimg.com%2Fmovieposters%2Fv7%2FAllPhotos%2F11588283%2Fp11588283_p_v7_ad.jpg%3Fw%3D270&client=cbc79c14efcebee57402&signature=4dd015bff7f7e561c2606283c9e553bd481e1d1c" width="220" height="342">
+                <span class="movie-name">El Americano</span>
+                <p class="story-line">When a gang of bully birds threaten his father and take over their circus, Cuco the parrot heads to Hollywood to ask TV superhero El Americano for help.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-center">
+        <div class="movie-card" data-trailer-youtube-id="yCOvcyfRPRk" data-toggle="modal" data-target="#trailer">
+            <a href="javascript:void(0)" class="movie-text" title="Transformers-The Last Knight-Humans are at war with the Transformers, and Optimus Prime is gone. The key to saving the future lies buried in the secrets of the past and the hidden history of Transformers on Earth.">
+                <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=https%3A%2F%2Fs3.amazonaws.com%2Fmoviefone%2Fimages%2Fposters%2Ftransformers-the-last-knight-poster_1486147874.jpg&client=cbc79c14efcebee57402&signature=a02d5d29c63018e3d71d21cc0713f8040a222b5f" width="220" height="342">
+                <span class="movie-name">Transformers-The Last Knight</span>
+                <p class="story-line">Humans are at war with the Transformers, and Optimus Prime is gone. The key to saving the future lies buried in the secrets of the past and the hidden history of Transformers on Earth.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-center">
+        <div class="movie-card" data-trailer-youtube-id="VSB4wGIdDwo" data-toggle="modal" data-target="#trailer">
+            <a href="javascript:void(0)" class="movie-text" title="Wonder Woman-Before she was Wonder Woman (Gal Gadot), she was Diana, princess of the Amazons, trained to be an unconquerable warrior.">
+                <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=https%3A%2F%2Fs3.amazonaws.com%2Fmoviefone%2Fimages%2Fposters%2Fwonder-woman-kneel-poster_1489524873.jpg&client=cbc79c14efcebee57402&signature=795c30f30434730b21074f6d53b05236a8bed51b" width="220" height="342">
+                <span class="movie-name">Wonder Woman</span>
+                <p class="story-line">Before she was Wonder Woman (Gal Gadot), she was Diana, princess of the Amazons, trained to be an unconquerable warrior.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-center">
+        <div class="movie-card" data-trailer-youtube-id="IjHgzkQM2Sg" data-toggle="modal" data-target="#trailer">
+            <a href="javascript:void(0)" class="movie-text" title="The Mummy-Nick Morton is a soldier of fortune who plunders ancient sites for timeless artifacts and sells them to the highest bidder.">
+                <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=https%3A%2F%2Fs3.amazonaws.com%2Fmoviefone%2Fimages%2Fposters%2Fmmyadv1shttcruisergb3smrgb_1492617113.jpg&client=cbc79c14efcebee57402&signature=91b2d0f3cb525b87f45f1425983c1d8a0a3e36ca" width="220" height="342">
+                <span class="movie-name">The Mummy</span>
+                <p class="story-line">Nick Morton is a soldier of fortune who plunders ancient sites for timeless artifacts and sells them to the highest bidder.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-center">
+        <div class="movie-card" data-trailer-youtube-id="ld4eE2HU-ig" data-toggle="modal" data-target="#trailer">
+            <a href="javascript:void(0)" class="movie-text" title="The Exception-German soldier Stefan Brandt goes on a mission to investigate exiled German Monarch Kaiser Wilhelm II.">
+                <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=http%3A%2F%2Faolx.tmsimg.com%2Fmovieposters%2Fv7%2FNowShowing%2F13888273%2Fp13888273_p_v7_aa.jpg%3Fw%3D270&client=cbc79c14efcebee57402&signature=88ee0de7549c28300c4f2808debb60a530b6378a" width="220" height="342">
+                <span class="movie-name">The Exception</span>
+                <p class="story-line">German soldier Stefan Brandt goes on a mission to investigate exiled German Monarch Kaiser Wilhelm II.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-center">
+        <div class="movie-card" data-trailer-youtube-id="UUKT-W0sr0M" data-toggle="modal" data-target="#trailer">
+            <a href="javascript:void(0)" class="movie-text" title="Mine-Trapped in the desert after standing on a land mine, a Marine sniper must single-handedly fight off the enemy while waiting more than two days for a convoy to rescue him.">
+                <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=https%3A%2F%2Fs3.amazonaws.com%2Fmoviefone%2Fimages%2Fposters%2Fmine2764x4096-poster_1487353313.jpg&client=cbc79c14efcebee57402&signature=c58162d8ab8ace5ad44cd5388b2b0ee3cd49829a" width="220" height="342">
+                <span class="movie-name">Mine</span>
+                <p class="story-line">Trapped in the desert after standing on a land mine, a Marine sniper must single-handedly fight off the enemy while waiting more than two days for a convoy to rescue him.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 text-center">
+        <div class="movie-card" data-trailer-youtube-id="XGk2EfbD_Ps" data-toggle="modal" data-target="#trailer">
+            <a href="javascript:void(0)" class="movie-text" title="John Wick 2-Retired super-assassin John Wick's plans to resume a quiet civilian life are cut short when Italian gangster Santino D'Antonio shows up on his doorstep with a gold marker, compelling him to repay past favors.">
+                <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=https%3A%2F%2Fs3.amazonaws.com%2Fmoviefone%2Fimages%2Fposters%2F20079352_poster_148037261514.jpg&client=cbc79c14efcebee57402&signature=cfc74e67065235be005cb27896c3656eb213054c" width="220" height="342">
+                <span class="movie-name">John Wick 2</span>
+                <p class="story-line">Retired super-assassin John Wick's plans to resume a quiet civilian life are cut short when Italian gangster Santino D'Antonio shows up on his doorstep with a gold marker, compelling him to repay past favors.</p>
+            </a>
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
