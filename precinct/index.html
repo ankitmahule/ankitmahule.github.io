@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Precinct - Welcome</title>
+    <!-- Meta data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="website=device-width,initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <!-- Google Font CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="src/css/style.css" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <header class="header nav navbar navbar-default navbar-fixed-top">
+                <h3 class="heading text-primary">
+                    <i class="fa fa-map-marker"></i>
+                    <span>Precinct</span>
+                    <span class="vertical-line"></span>
+                </h3>
+                <small class="sub-heading">Check what's in your neighbourhood</small>
+                <i class="fa fa-bars bars-icon" aria-hidden="true"></i>
+            </header>
+            <aside class="col-md-3 col-sm-4 border-right side-menu">
+                <div class="filter-section">
+                    <h5 class="pad-10 text-bold">Filter Locations</h5>
+                    <div class="input-group mb-20">
+                        <input type="text" class="form-control filter-text" placeholder="Filter Location">
+                        <span class="input-group-addon"><i class="fa fa-filter"></i></span>
+                    </div>
+                    <h5 class="pad-10 text-bold">Locations</h5>
+                    <ul class="nav results">
+                        <li><i class="glyphicon glyphicon-map-marker mr-5"></i><span>1</span></li>
+                        <li>1</li>
+                        <li>1</li>
+                        <li>1</li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="col-md-9 col-xs-12 col-sm-8">
+                <div class="row">
+                    <div id="map-container"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyA4w6YpRSG2Tb2otRgBO4NgkFgTDdE5IgU&callback=initMap"></script>
+        <script src="src/js/map.js"></script>
+    </footer>
+</body>
