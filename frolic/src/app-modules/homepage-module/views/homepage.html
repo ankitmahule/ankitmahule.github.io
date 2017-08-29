@@ -1,0 +1,41 @@
+<ng-include src="'../../sidebar-module/views/sidebar.html'"></ng-include>
+<section class="col-md-9 mt-20">
+    <div class="panel panel-default items-menu">
+        <a href="#!/add_item" class="btn btn-success pull-right">Add Item</a>
+        <p class="view-items-heading">Currently Viewing <span class="text-primary">{{homePageCtrl.filters.catName}}</span> Items</p>
+    </div>
+    <div class="panel panel-default items-panel">
+        <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 text-center mb-20" ng-repeat="item in homePageCtrl.items | filter:homePageCtrl.filters.catId">
+            <div class="item-card" data-trailer-youtube-id="dN26X92SOu8" data-toggle="modal" data-target="#trailer">
+                <a href="#!/view_details?q=cars" class="movie-text" title="Cars-Blindsided by a new generation of blazing-fast cars, the legendary Lighting McQueen finds himself pushed out of the sport that he loves.">
+                    <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=http%3A%2F%2Faolx.tmsimg.com%2Fmovieposters%2Fv7%2FAllPhotos%2F12216968%2Fp12216968_p_v7_ac.jpg%3Fw%3D270&client=cbc79c14efcebee57402&signature=d1d669fff37f96462e63b32b45b7aef191f18789"
+                        width="220" height="342">
+                    <span class="item-name">{{item.title}}</span>
+                    <p class="description">{{item.description}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="panel panel-default items-panel">
+        <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 text-center">
+            <div class="item-card" data-trailer-youtube-id="dN26X92SOu8" data-toggle="modal" data-target="#trailer">
+                <a href="javascript:void(0)" class="movie-text" title="Cars-Blindsided by a new generation of blazing-fast cars, the legendary Lighting McQueen finds himself pushed out of the sport that he loves.">
+                    <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=http%3A%2F%2Faolx.tmsimg.com%2Fmovieposters%2Fv7%2FAllPhotos%2F12216968%2Fp12216968_p_v7_ac.jpg%3Fw%3D270&client=cbc79c14efcebee57402&signature=d1d669fff37f96462e63b32b45b7aef191f18789"
+                        width="220" height="342">
+                    <span class="item-name">Cars</span>
+                    <p class="description">Blindsided by a new generation of blazing-fast cars, the legendary Lighting McQueen finds himself pushed out of the sport that he loves.</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 text-center">
+            <div class="item-card" data-trailer-youtube-id="dN26X92SOu8" data-toggle="modal" data-target="#trailer">
+                <a href="javascript:void(0)" class="movie-text" title="Cars-Blindsided by a new generation of blazing-fast cars, the legendary Lighting McQueen finds himself pushed out of the sport that he loves.">
+                    <img class="img-responsive" src="https://o.aolcdn.com/images/dims?resize=270%2C400&quality=70&image_uri=http%3A%2F%2Faolx.tmsimg.com%2Fmovieposters%2Fv7%2FAllPhotos%2F12216968%2Fp12216968_p_v7_ac.jpg%3Fw%3D270&client=cbc79c14efcebee57402&signature=d1d669fff37f96462e63b32b45b7aef191f18789"
+                        width="220" height="342">
+                    <span class="item-name">Cars</span>
+                    <p class="description">Blindsided by a new generation of blazing-fast cars, the legendary Lighting McQueen finds himself pushed out of the sport that he loves.</p>
+                </a>
+            </div>
+        </div>
+    </div> -->
+</section>

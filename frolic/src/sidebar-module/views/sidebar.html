@@ -1,0 +1,11 @@
+<aside class="side-bar col-md-3 col-sm-12 col-xs-12">
+    <div class="filter-section">
+        <h5 class="pad-10 category-heading">Categories</h5>
+        <div class="row">
+            <hr class="separator">
+        </div>
+        <ul class="nav categories">
+            <li ng-repeat="category in homePageCtrl.categories" ng-click="homePageCtrl.getItemsByCategory(category.id,category.name)">{{category.name}}</li>
+        </ul>
+    </div>
+</aside>
