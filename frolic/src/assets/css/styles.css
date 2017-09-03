@@ -5,8 +5,8 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans', sans-serif;
-    background: #fff;
+    font-family: 'Droid Sans', sans-serif;
+    background: #eee;
 }
 
 .border-right {
@@ -21,12 +21,20 @@ body {
     margin-right: 10px;
 }
 
+.pr-0 {
+    padding-right: 0;
+}
+
 .ml-20 {
     margin-left: 20px;
 }
 
 .mt-20 {
     margin-top: 20px;
+}
+
+.mt-50 {
+    margin-top: 50px
 }
 
 .vertical-line {
@@ -36,6 +44,10 @@ body {
 
 .border-bottom {
     border-bottom: 1px solid #ddd;
+}
+
+.border-top {
+    border-top: 1px solid #ddd;
 }
 
 .link-text {
@@ -49,6 +61,16 @@ body {
 
 .pad-10 {
     padding: 0px 0px 10px 0px;
+}
+
+.pad-60 {
+    padding: 0px 60px;
+}
+
+.wrapper,
+.log-reg-wrapper {
+    background: #fff;
+    min-height: 100vh;
 }
 
 .wrapper {
@@ -105,6 +127,14 @@ body {
 .navbar-default .navbar-nav>li>a:focus {
     color: #fff;
     font-weight: bold;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background: #fff;
+}
+
+.navbar-collapse {
+    padding-right: 0px;
 }
 
 .sub-heading {
@@ -179,7 +209,7 @@ hr {
 }
 
 .items-panel {
-    padding: 30px 10px;
+    padding: 30px 10px 0px 10px;
 }
 
 .item-card a {
@@ -214,7 +244,7 @@ hr {
 }
 
 
-/*Start of Login CSS*/
+/*Start of Login and registration CSS*/
 
 .jumbotron {
     background: transparent;
@@ -222,6 +252,7 @@ hr {
 
 .login-panel {
     padding: 30px 30px 0px 30px;
+    box-shadow: none;
 }
 
 input.form-control {
@@ -238,6 +269,17 @@ textarea.form-control {
 
 
 /*End of Login CSS*/
+
+
+/*Start of Other forms CSS*/
+
+.form-panel {
+    padding: 0px 30px 30px 30px;
+    box-shadow: none;
+}
+
+
+/*End of Other forms CSS*/
 
 
 /*Start of Details Page CSS*/
@@ -274,6 +316,7 @@ textarea.form-control {
 
 .del-content p {
     font-size: 20px;
+    text-align: center;
 }
 
 
@@ -288,6 +331,42 @@ textarea.form-control {
     }
     .wrapper {
         padding-top: 20px;
+    }
+    .pr-0 {
+        padding-right: 15px;
+    }
+    .pad-60 {
+        padding: 0px 20px;
+    }
+    .sub-heading {
+        top: 13px;
+        font-size: 12px;
+    }
+    .navbar a.navbar-brand {
+        font-size: 16px;
+    }
+    .mt-20 {
+        margin-top: 0px;
+    }
+    .main-view {
+        margin-top: 50px;
+    }
+    .side-bar {
+        position: fixed;
+        bottom: 0px;
+        z-index: 1;
+        width: 70%;
+        top: 50px;
+    }
+    .navbar {
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        top: 0;
+    }
+    .login-panel {
+        padding: 0px;
     }
 }
 
