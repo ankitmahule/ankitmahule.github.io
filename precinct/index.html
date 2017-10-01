@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+<html>
 
 <head>
     <title>Precinct - Welcome</title>
     <!-- Meta data -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="website=device-width,initial-scale=1.0">
+    <meta name="viewport" content="device-width,initial-scale=1.0">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
@@ -26,22 +27,26 @@
                     <span class="vertical-line"></span>
                 </h3>
                 <small class="sub-heading">Check what's in your neighbourhood</small>
-                <i class="fa fa-bars bars-icon" aria-hidden="true"></i>
+                <i class="fa fa-bars bars-icon" aria-hidden="true" data-bind="click:toggleSidebar.bind($data,isSidebarVisible)"></i>
             </header>
-            <aside class="col-md-3 col-sm-4 border-right side-menu">
+            <aside class="col-md-3 col-sm-4 border-right side-menu" data-bind="visible:isSidebarVisible">
                 <div class="filter-section">
                     <h5 class="pad-10 text-bold">Filter Locations</h5>
                     <div class="input-group mb-20">
-                        <input type="text" class="form-control filter-text" placeholder="Filter Location">
-                        <span class="input-group-addon"><i class="fa fa-filter"></i></span>
+                        <input type="text" data-bind="value:inputLocation,event: { keyup:$root.onEnter}" class="form-control filter-text" placeholder="Filter Location">
+                        <span class="input-group-addon" data-bind="click:$root.filterLocations.bind()"><i class="fa fa-filter"></i></span>
+                    </div>
+                    <div class="row">
+                        <hr class="separator">
                     </div>
                     <h5 class="pad-10 text-bold">Locations</h5>
-                    <ul class="nav results">
-                        <li><i class="glyphicon glyphicon-map-marker mr-5"></i><span>1</span></li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
+                    <ul class="nav results" data-bind="foreach:locFilter">
+                        <li data-bind="click:$root.highlightMarker.bind($data,title)"><i class="glyphicon glyphicon-map-marker mr-5"></i><span data-bind="text:title"></span></li>
                     </ul>
+                    <!--<p class="text-bold text-muted" data-bind="if: app.mapData().length == 0">
+                        <i class="fa fa-frown-o" aria-hidden="true"></i>
+                        <span>Sorry no locations found. Please try other inputs..</span>
+                    </p>-->
                 </div>
             </aside>
             <section class="col-md-9 col-xs-12 col-sm-8">
@@ -52,7 +57,16 @@
         </div>
     </div>
     <footer>
+
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+        <script src="src/models/map.data.js"></script>
+        <script src="src/viewmodels/map.viewmodel.js"></script>
+        <script src="src/app.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyA4w6YpRSG2Tb2otRgBO4NgkFgTDdE5IgU&callback=initMap"></script>
         <script src="src/js/map.js"></script>
+
     </footer>
 </body>
+
+</html>
