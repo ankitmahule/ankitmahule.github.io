@@ -88,7 +88,38 @@ function createInfoWindow(marker) {
     // Check to make sure the infoWindow is not already opened on this marker.
     if (largeInfoWindow.marker != marker) {
         largeInfoWindow.marker = marker;
-        largeInfoWindow.setContent('<div>' + marker.title + '</div>');
+        largeInfoWindow.setContent('');
+        var streetViewService = new google.maps.StreetViewService();
+        var radius = 50;
+        // In case the status is OK, which means the pano was found, compute the
+        // position of the streetview image, then calculate the heading, then get a
+        // panorama from that and set the options
+        function getStreetView(data, status) {
+            if (status == google.maps.StreetViewStatus.OK) {
+                var nearStreetViewLocation = data.location.latLng;
+                var heading = google.maps.geometry.spherical.computeHeading(
+                    nearStreetViewLocation, marker.position);
+                largeInfoWindow.setContent('<h5 class="title-heading">' + marker.title + '</h5><div id="pano"></div>');
+                var panoramaOptions = {
+                    position: nearStreetViewLocation,
+                    pov: {
+                        heading: heading,
+                        pitch: 30
+                    }
+                };
+                var panorama = new google.maps.StreetViewPanorama(
+                    document.getElementById('pano'), panoramaOptions);
+            } else {
+                largeInfoWindow.setContent('<div>' + marker.title + '</div>' +
+                    '<p class="text-bold text-muted">' +
+                    '<i class="fa fa-frown-o" aria-hidden="true"></i>' +
+                    '<span>Sorry no locations found. Please try other inputs..</span>' +
+                    '</p>');
+            }
+        }
+        // Use streetview service to get the closest streetview image within
+        // 50 meters of the markers position
+        streetViewService.getPanoramaByLocation(marker.position, radius, getStreetView);
         largeInfoWindow.open(map, marker);
         // Make sure the marker property is cleared if the infoWindow is closed.
         largeInfoWindow.addListener('closeclick', function() {

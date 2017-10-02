@@ -87,6 +87,16 @@ body {
     border-top: 1px solid #ddd;
 }
 
+#pano {
+    width: 400px;
+    height: 300px;
+}
+
+.title-heading {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 
 /*Start of main section CSS*/
 
