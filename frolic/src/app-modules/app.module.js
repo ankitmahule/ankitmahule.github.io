@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     var appModule = angular.module("frolicApp.app", []);
-    appModule.config(function($stateProvider, $urlRouterProvider) {
+    appModule.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/');
         $stateProvider.state('home', {
             url: '/',
@@ -11,7 +11,9 @@
         });
         $stateProvider.state('addItem', {
             url: '/add_item',
-            templateUrl: './app-modules/add-item-module/views/add-item.html'
+            templateUrl: './app-modules/create-item-module/views/create-item.html',
+            controller: 'createController',
+            controllerAs: 'createCtrl'
         });
         $stateProvider.state('deleteItem', {
             url: '/delete_item',
@@ -25,15 +27,21 @@
         });
         $stateProvider.state('login', {
             url: '/login',
-            templateUrl: './app-modules/login-module/views/login.html'
+            templateUrl: './app-modules/login-module/views/login.html',
+            controller: 'loginController',
+            controllerAs: 'loginCtrl'
         });
         $stateProvider.state('register', {
             url: '/register',
-            templateUrl: './app-modules/register-module/views/register.html'
+            templateUrl: './app-modules/register-module/views/register.html',
+            controller: 'registerController',
+            controllerAs: 'registerCtrl'
         });
         $stateProvider.state('viewDetails', {
             url: '/view_details',
-            templateUrl: './app-modules/view-details-module/views/view-details.html'
+            templateUrl: './app-modules/view-details-module/views/view-details.html',
+            controller: 'viewController',
+            controllerAs: 'viewCtrl'
         });
-    });
+    }]);
 })();

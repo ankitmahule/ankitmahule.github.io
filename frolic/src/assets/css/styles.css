@@ -9,6 +9,28 @@ body {
     background: #eee;
 }
 
+.error-message {
+    color: #E52B39;
+    margin-top: 10px;
+}
+
+select.form-control {
+    height: 40px;
+}
+
+.form-control {
+    font-size: 15px;
+}
+
+.alert-dismissable .close {
+    top: 2px;
+    right: 0px;
+}
+
+.alert {
+    padding: 10px;
+}
+
 .border-right {
     border-right: 1px solid #ddd;
 }
@@ -129,11 +151,16 @@ body {
     font-weight: bold;
 }
 
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background: transparent;
+}
+
 .navbar-default .navbar-toggle .icon-bar {
     background: #fff;
 }
 
-.navbar-collapse {
+.navbar-right>li>a:last-child {
     padding-right: 0px;
 }
 
@@ -155,6 +182,7 @@ body {
     height: 100vh;
     background: #fff;
     box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+    margin-top: 20px;
 }
 
 hr {
@@ -329,6 +357,10 @@ textarea.form-control {
     .item-card {
         margin-bottom: 20px;
     }
+    .cut-margin {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
     .wrapper {
         padding-top: 20px;
     }
@@ -357,6 +389,24 @@ textarea.form-control {
         z-index: 1;
         width: 70%;
         top: 50px;
+        left: -70%;
+        margin-top: 0px;
+    }
+    .side-bar {
+        -webkit-animation: slide 0.5s forwards;
+        -webkit-animation-delay: 0.2s;
+        animation: slide 0.5s forwards;
+        animation-delay: 0.2s;
+    }
+    @-webkit-keyframes slide {
+        100% {
+            left: 0;
+        }
+    }
+    @keyframes slide {
+        100% {
+            left: 0;
+        }
     }
     .navbar {
         position: fixed;
@@ -365,8 +415,16 @@ textarea.form-control {
         z-index: 1030;
         top: 0;
     }
-    .login-panel {
+    .login-panel,
+    .form-panel {
         padding: 0px;
+    }
+    .navbar-collapse {
+        background: #176794;
+    }
+    .jumbotron {
+        text-align: center;
+        padding: 0;
     }
 }
 

@@ -1,15 +1,17 @@
 'use strict';
 
-const webpack = require('webpack'),
-    glob = require('glob');
+const webpack = require('webpack');
+const glob = require('glob');
 const path = require('path');
-
 let config = {
     entry: {
         'vendor': [
             'angular',
-            'angular-ui-router',
-            'jquery'
+            '@uirouter/angularjs',
+            'jquery',
+            'bootstrap',
+            'angular-sanitize',
+            'ng-file-upload'
         ],
         // Auto-detect all pages in directory.
         'myPages': glob.sync('./src/**/*.js'),
@@ -45,7 +47,7 @@ let config = {
     },
 
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js'
 
     },
