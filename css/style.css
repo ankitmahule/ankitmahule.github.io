@@ -2,3 +2,20 @@
     padding: 0;
     margin: 0;
 }
+
+body {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+main {
+    display: flex;
+}
+
+.profile-section {
+    width: 30%;
+    background: #eee;
+}
+
+.detail-section {
+    width: 70%;
+}
