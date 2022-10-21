@@ -1,0 +1,9 @@
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+	.intro-section {
+		background: url("../images/background.jpg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: top;
+		height: 56vh;
+	}
+}
