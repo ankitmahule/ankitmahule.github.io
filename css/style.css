@@ -18,11 +18,12 @@ body {
 
 .heading-section {
 	padding: 10%;
+	color: #aaa;
+	text-align: right;
 }
 
 .heading-section h1 {
 	font-size: 3.4rem;
-	color: #333;
 }
 
 .heading-section h4 {
@@ -37,7 +38,7 @@ body {
 
 .nav-items {
 	display: flex;
-	justify-content: right;
+	justify-content: center;
 	list-style: none;
 	padding: 2%;
 }
@@ -48,12 +49,12 @@ body {
 }
 
 .nav-items li a {
-	color: #444;
+	color: #aaa;
 	text-decoration: none;
 }
 
 .nav-items li a:hover {
-	color: #aaa;
+	color: #ccc;
 }
 
 .container {
@@ -111,6 +112,7 @@ body {
 	margin-left: 20px;
 	background: rgba(0, 0, 0, 0.3);
 	border-radius: 40px;
+	cursor: pointer;
 }
 
 .fa:first-child {
@@ -118,7 +120,8 @@ body {
 }
 
 .fa:hover {
-	background: #fff;
+	background: #ccc;
+	color: #222;
 }
 
 @keyframes load {
